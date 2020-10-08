@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let const diferenças</title>
+</head>
+<body>
+    <h2>var let const diferenças</h2>
+
+    <p>var - não diferncia o escopo</p>
+    <p>let e const - diferenciam o escopo</p>
+    <p>const - para variáveis constantes</p>
+    <p>let - para variáveis</p>
+
+    <h2>sugestão:</h2>
+    <p>Ulitizem apenas let e const</p>
+
+    <h2>Exemplos var</h2>
+    <p id="nome"></p>
+    <script>
+        var nome = "Rachel";
+        {
+            var nome = "Raquel";
+        }
+        document.getElementById("nome").innerHTML = nome;
+    </script>
+
+<h2>Exemplos let</h2>
+<p id="nome2"></p>
+<script>
+    let nome2 = "Rachel";
+    {
+        let nome2 = "Raquel";
+    }
+    document.getElementById("nome2").innerHTML = nome2;
+</script>
+</body>
+</html>

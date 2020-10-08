@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_05 - Saídas</title>
+</head>
+<body>
+    <h2>JavaScirpt Output - Saídas</h2>
+    <p>Possibilidades de exibir o JS</p>
+    <ul>
+        <li><code>innerHTML</code></li>
+        <li><code>window.alert</code></li>
+        <li><code>console.log</code></li>
+        <li><code>document.write</code></li>
+        <li><code>window.print</code></li>
+    </ul>
+    <h2><code>innerHTML</code></h2>
+    <p> O método <code>document.getElementById(id)</code></p>
+
+    <p id="exemplo"></p>
+
+    <script>
+        document.getElementById("exemplo").innerHTML = 5 + 6;
+    </script>
+
+
+    <hr>    
+
+
+    <h2><code>window.alert</code></h2>
+    <p>Caixa de alerta para exibir dados:</p>
+
+    <script>
+        window.alert(5 + 7);
+    </script>
+
+
+    <hr>
+
+
+    <h2><code>console.log</code></h2>
+    <p>Para o <code>console.log</code> precisamos do console</code></p>
+    <script>
+        console.log(5 + 6);
+    </script>
+
+
+    <hr>    
+
+
+    <h2><code>document.write()</code></h2>
+    <p>O método <code>document.write()</code></p>
+    <script>
+        document.write( 7 + 5);
+    </script>
+
+    <h2 style="color: red;">Importante!!!</h2>
+    <p>o <code>document.write()</code> exclui o HTML</p>
+    <p>Utilize apenas para testes!</p>
+
+    <button type="button" onclick="document.write(5 + 7)">Não clique</button>
+
+
+    
+
+    <hr>
+
+
+    <h2>window.print()</h2>
+    <p>É possível imprimir a página</p>
+    <button onclick="window.print()">Imprimir a tela</button>
+    
+
+</body>
+</html>

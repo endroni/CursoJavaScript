@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_02_JavaScritp</title>
+
+    <style>
+        code.codigos {
+            color: crimson;
+            background-color: #f1f1f1;
+            padding-left: 4px;
+            padding-right: 4px;
+            font-size: 110%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="exemplo1">
+        <h2>Um botão que mostra a hora</h2>
+
+        <button type="button"
+            onclick="document.getElementById('hora').innerHTML = Date()">
+            Clique para saber a hora.
+        </button>
+
+        <p id="hora"></p>
+    </div>
+
+    <hr>
+
+    <div class="exemplo2">
+        <h2>Alterando o conteúdo do HTML</h2>
+        <p>O método <code class="codigos">getElementById()</code> depende o <code class="codigos">id</code></p>
+        <p>O elemento innerHTML inputa um valor</p>
+
+        <p id="conteudo">O conteúdo desse parágrafo será alterado.</p>
+
+        <button type="button" onclick='document.getElementById("conteudo").innerHTML = "JavaScript domina!"'>
+            Clique!</button>
+    </div>
+
+    <hr>
+
+    <div class="exemplo3">
+        <h2>Alterando valores de atributos</h2>
+        <p>Alterando o atributo <code class="codigos">src</code> atributo (fonte) de uma <code class="codigos">&lt;img&gt;</code></p>
+        
+        <button onclick="on()">Acende</button>
+
+        <img id="lampada" src="lampadaOff.gif" style="width:100px"
+        onmouseover="on()" onmouseout="off()">
+
+        <button onclick="off()">Apaga</button>
+
+        <script>
+            function on() {
+                document.getElementById("lampada").src="lampadaOn.gif";
+            }
+
+            function off() {
+                document.getElementById("lampada").src="lampadaOff.gif";
+            }
+        </script>
+        
+    </div>
+
+    <hr>
+
+    <div class="exemplo4">
+        <h2>Alterando o estilo</h2>
+        
+        <p id="tamanho">Alterando o tamanho da fonte.</p>
+
+        <button type="button" onclick="document.getElementById('tamanho').style.fontSize='35px'">
+            Aumentar!
+        </button>
+    </div>
+
+    <hr>
+
+    <div class="exemplo5">
+        <h2>Ocultando elementos</h2>
+
+        <p id="oculto">Esse parágrafo pode aparatar</p>
+
+        <button type="button" onclick="document.getElementById('oculto').style.display='none'">
+            Sumiu!
+        </button>
+
+        <button type="button" onclick="document.getElementById('oculto').style.display='block'">
+            Apareceu!
+        </button>
+    </div>
+
+    <hr>    
+
+    <div class="tag">
+        <h2>A tag <code class="codigos"> &lt;script&gt; </code> e  <code class="codigos"> &lt;/script&gt; </code></h2>
+        
+        <p id="type"></p>
+        <script>
+            document.getElementById("type").innerHTML = "O atributo type não é obrigatório";
+        </script>        
+    </div>
+
+</body>
+</html>

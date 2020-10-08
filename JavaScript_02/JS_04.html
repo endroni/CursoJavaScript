@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_04 - Externo</title>
+
+</head>
+<body>
+    <h2>JavaScript externo</h2>
+
+    <p>Uma forma prática de trabalhar com JavaScript é ...</p>
+
+    <button type="button" onclick="fora()">Onde?</button>
+
+    <p id="aqui"></p>
+
+    <p>A função fica em um arquivo externo. Isso facilita a Reutilização de código</p>
+
+    <p>Deixando o JS inline ou dentro da tag style, diminuem o número total de requisições HTTP e pode ser bom quando o código é pequeno. 
+        Porem, para códigos muito grandes, o recomendado mesmo é deixar externo.</p>
+    <h2>Algumas vantagens!</h2>
+    <ul>
+        <li>Separação de HTML do código</li>
+        <li>Legibilidade</li>
+        <li>Velocidade no tempo de carregamento</li>        
+        <li>Possibilidade de uso de mecanismos de cache do browser</li>
+    </ul>
+    
+    <script src="codigo.js"></script>
+    
+</body>
+</html>

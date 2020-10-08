@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_06 - Variáveis</title>
+</head>
+<body>
+    <h2>Variáveis</h2>
+    <p>É uma boa prática de programação declarar todas as variáveis ​​no início de um script.</p>
+    
+    <h2>Somando strings</h2>
+    <p id="exe"></p>
+
+    <script>
+        let x = "João" + " " + "Pessoa";
+        document.getElementById("exe").innerHTML = x;
+    </script>
+
+    <h2>Número como string</h2>
+    <p>Se você colocar um número entre aspas, 
+        o resto dos números serão tratados como strings e concatenados.
+    </p>
+
+    <p id="exe2"></p>
+    <p id="exe3"></p>
+
+    <script>
+        let $ = 2 + 3 + "5";
+        let $$ = 2 + 3 + "5" + 6;
+        document.getElementById("exe2").innerHTML = $;
+        document.getElementById("exe3").innerHTML = $$;
+    </script>
+
+
+    <hr>    
+    <h2>Operadores</h2>
+    
+    <img src="operadores.png" alt="Operadores JS">
+
+    <h2>Exemplos:</h2>
+
+    <img src="operadores2.png" alt="Operadores JS">
+
+    <h2>+= atribuição e adição</h2>
+
+    <p>Atribuição</p>
+    <p id="exe4"></p>
+
+    <p>Potenciação</p>
+    <p id="exe5"></p>
+
+    <p>Incremento</p>
+    <p id="exe6"></p>
+
+    <p>Decremento</p>
+    <p id="exe7"></p>
+
+    <script>
+        let atribuicao = 10;
+        atribuicao += 5;
+        document.getElementById("exe4").innerHTML = atribuicao;
+
+        let n1 = 2;
+        let n2 = 3;
+        let potenciação = n1 ** n2;
+        document.getElementById("exe5").innerHTML = potenciação;
+        
+        let incremento = potenciação++
+        document.getElementById("exe6").innerHTML = incremento;                        
+
+        let decremento = --potenciação
+        document.getElementById("exe7").innerHTML = decremento;                        
+    </script>
+
+    <hr>
+
+    <h2>Operadores de comparação</h2>
+    <img src="operadores3.png" alt="Operadores de comparação">
+
+    <hr>
+
+    <h2>Operadores lógicos</h2>
+    <img src="operadores4.png" alt="Operadores de comparação">
+
+    <hr>    
+
+    <h2>Operadores de tipo</h2>
+    <img src="operadores5.png" alt="Operadores de tipo">
+
+    <p id="exe8"></p>
+    <p id="exe9"></p>
+
+    <script>
+        let e1 = " "; 
+        
+        /* "" - String, 7 - number, true - boolea */
+        document.getElementById("exe8").innerHTML = typeof(e1);
+        
+        function soma(r, t) {
+            return r + t;
+        }
+
+        let frutas = ["Banana", "Laranja", "Maça", "Manga"];
+        document.getElementById("exe9").innerHTML = frutas instanceof Array;
+    </script>
+</body>
+</html>

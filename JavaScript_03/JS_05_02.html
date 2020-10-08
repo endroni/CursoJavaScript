@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_05_02 - Declarações</title>
+</head>
+<body>
+
+    <h2>Declarações em JavaScript</h2>
+    
+    <ul>
+        <li>Valores</li>
+        <li>Operadores</li>
+        <li>Expressões</li>
+        <li>palavra-chave</li>
+        <li>comentário</li>
+    </ul>
+
+    <p id="soma"></p>
+
+    <script>
+        var x, y, res;
+        x = 10;
+        y = 20;
+        res = x + y;    
+
+        document.getElementById("soma").innerHTML = 
+        "O valor de " + x + " + " + y + " = " + res;
+    </script>
+
+
+
+
+
+    <hr>
+
+
+    <h2>O uso do ponto e vírgula é opcional, mas altamente recomendado</h2>
+    <p>Porém, para declarações em linha, elas são necessárias</p>
+
+    <p id="soma2"></p>
+
+    <script>
+        var a, b, c;
+        a = 10; b = 15; c = a + b;
+        document.getElementById("soma2").innerHTML = c;
+    </script>
+
+
+
+
+    <hr>
+
+
+    <h2>Espaço em branco ignorado ou quebras de linha</h2>
+    <p>Pode utilizar para deixar o código mais legível</p>
+    <p>coloque espaços ao redor dos operadores (= + - * /)</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+        "Olá turma!";
+    </script>
+
+
+
+    <hr>
+
+
+
+    <h2>Blocos de códigos em funções</h2>
+    <p>O objetivo dos blocos de código é definir instruções a serem executadas juntas.</p>
+
+    <button type="button" onclick="funcao1()">Tempo!</button>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        function funcao1() {
+            document.getElementById("demo1").innerHTML = "O sol já raiou!";
+            document.getElementById("demo2").innerHTML = "será que vai chover?";
+        }
+    </script>
+
+
+
+    <hr>
+
+
+    
+    <h2>palavra-chave</h2>
+
+    <img src="palavra_chave.png" alt="palavra-chave">
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_03 - Onde colocar</title>
+    <script>
+        function onde() {
+          document.getElementById("cabeca").innerHTML = "Mas o elegante é ficar externo";
+        }
+        </script>
+</head>
+<body>
+    <h2>O JavaScript pode ficar no head</h2>
+    <p id="cabeca">Onde colocar o JavaScript?</p>
+
+    <button type="button" onclick="onde()">Where?</button>
+
+    <hr>    
+    <h2>O JavaScript pode ficar no body</h2>
+    <p id="corpo">Onde colocar o JavaScript?</p>
+
+    <button type="button" onclick="corpo()">Where?</button>
+
+    <p>
+        Colocar scripts na parte inferior do elemento <body> melhora a velocidade de exibição, porque a interpretação do script torna a exibição mais lenta.
+    </p>
+
+    <script>
+        function corpo() {
+            document.getElementById("corpo").innerHTML = "O elegante é ficar externo.";
+        }
+    </script>
+    
+</body>
+</html>

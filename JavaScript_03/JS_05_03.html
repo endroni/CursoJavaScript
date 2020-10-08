@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_05_03 - Sintaxe</title>
+</head>
+<body>
+    <h2>A sintaxe JavaScript é o conjunto de regras, como os programas JavaScript são construídos:</h2>
+    <script>
+        var x, y, z;       // Declarando variáveis
+        x = 5; y = 6;      // Atribuindo valores ou iniciando 
+        z = x + y;         // Calculando valores
+    </script>
+
+
+
+    <hr>    
+
+    <h2>Valores literais</h2>
+    <p>Os valores literais, são os valores fixos</p>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 10.50;
+    </script>
+
+    <p>Os números são escritos sem aspas. </p>
+
+    <p>Strings são textos, escritos entre aspas duplas ou simples.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        document.getElementById("demo2").innerHTML = 'Luiz Fernando';
+    </script>
+
+
+    <hr>    
+
+    <h2>Valores variáveis</h2>
+    <p>O JS utiliza <code>var</code>, <code>const</code> ou <code>let</code> 
+        como palavra-chave para declarar variáveis
+    </p>
+    
+    <h2>let e const (2015)</h2>
+
+    <p>
+        A versão 2015 do JavaScript(ES6 - ECMAScript 2015) permite o uso da <code>const</code>
+        para definir variável que não pode ser reatribuída.        
+    </p>
+    <p>
+        A <code>let</code> para definir variável com escopo restrito.
+    </p>
+
+    <!-- Parei aqui (06/10/2020)-->
+
+    <h2>Identificadores são nomes</h2>
+
+    <p>Identificadores são usados ​​para nomear variáveis ​​(e palavras-chave, funções e rótulos).</p>
+    <p>O primeiro caractere deve ser uma letra, um sublinhado (_) ou um cifrão ($).</p>
+    <p>Números não são permitidos como primeiro caractere.</p>
+    <p>Hífens não são permitido</p>
+
+    <hr>
+
+    <h2>Case Sensitive</h2>
+    <p>As variáveis <code>primeiroNome</code> é diferente de <code>primeironome</code></p>
+    
+    <p id="exe"></p>
+
+    <script>
+        var primeironome, primeiroNome;
+        primeironome = "Camila";
+        primeiroNome = "Carolina";
+        document.getElementById("exe").innerHTML = primeiroNome;
+    </script>
+
+    <p>JavaScript não interpreta VAR ou Var como a palavra-chave <code>var</code>.</p>
+    
+    <h2>Nomes de variáveis</h2>
+    <h2>Sublinahdo</h2>
+    <ul>
+        <li>primeiro_nome</li>
+        <li>valor_total</li>
+        <li>valor_pedido</li>
+    </ul>
+
+    <h2>camelCase</h2>
+    <ul>
+        <li>primeiroNome</li>
+        <li>valorTotal</li>
+        <li>valorPedido</li>
+    </ul>
+
+    <h2>PascalCase</h2>
+    <ul>
+        <li>PrimeiroNome</li>
+        <li>ValorTotal</li>
+        <li>ValorPedido</li>
+    </ul>
+    
+</body>
+</html>
