@@ -22,7 +22,7 @@ console.log(soma(2, 4));
 // Dentro da função, os argumentos (os parâmetros) se comportam como variáveis locais.
 
 // Expressão de função
-// Uma função JavaScript também pode ser definida usando uma expressão .
+// Uma função JavaScript também pode ser definida usando uma expressão.
 // Uma expressão de função pode ser armazenada em uma variável:
 // Exemplo: 
 
@@ -48,24 +48,6 @@ const far = function paraFahrenheit(celsius) {
 console.log(`26 C° em fahrenheit são: ${far(26)} `);
  
 
-// ES6 - Funções de Seta - Não necessita das palavras reservadas function nem return
-let divide = ( c , d) => c / d;
-console.log(divide(4 , 2));
-
-// Obs. As funções em seta precisam ser definidas antes de serem usadas. Não são adequadas 
-// para definir métodos de objeto pois não possui sua própria this(+- = public).
-
-// Operador ternário
-e = 7;
-f = 9;
-const comparação = ( e > f) ? "Maior" : e < f ? "Menor" : "iguais";
-console.log(comparação)
-
-function comparaNumeros(e,f) {
-    return e > f ? 1 : e < f ? -1 : 0 
-}
-console.log(`chamada da função comparação: ` + comparaNumeros(4,3))
-
 // Parâmetro padrão
 // Argumentos ignorados são definidos como undefined (indefinidos)
 
@@ -83,14 +65,60 @@ function queNumero2(v1, v2 = 3) {
 }
 console.log(queNumero2(3));
 
-// O objeto Argumentos
+
+
+
+// Funções anônimas
+// Uma função anônima é uma função que não tem nome
+const soma2 = function(x, y) {
+    return x + y;
+}
+
+console.log(soma2(5, 6));
+
+
+
+
+
+
+
+
+
+const imprimirResultado = function (a, b, operacao = soma2) {
+    console.log(operacao(a, b))
+}
+
+imprimirResultado(3,4)
+imprimirResultado(3, 6, soma2)
+imprimirResultado(3,7, function (x, y) { return x - y})
+imprimirResultado(3, 4, (x, y) => x * y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// O objeto Argumentos arguments.length
 // Encontrando o maior número
 
-numeros = findMax(1, 123, 500, 115, 44, 88);
+numeros = encontreMaior(1, 123, 500, 115, 44, 88);
 
-function findMax() {
-  var i;
-  var max = -Infinity;
+function encontreMaior() {
+  let i;
+  let max = -Infinity;
   for (i = 0; i < arguments.length; i++) {
     if (arguments[i] > max) {
       max = arguments[i];
@@ -98,5 +126,53 @@ function findMax() {
   }
   return max;
 }
+console.log(encontreMaior(numeros))
 
-console.log(findMax(numeros))
+// um teste que fiz para entender o Infinity
+if (Infinity > 0) {
+    console.log(typeof(Infinity));
+    console.log("maior")
+}
+
+// Utilizando o arguments.length
+// Somando argumentos
+
+somaNumeros = sumAll(1, 123, 500, 115, 44, 88)
+
+function sumAll() {
+    var i;
+    var sum = 0;
+    for(i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+    return sum;
+  }
+
+console.log(sumAll(somaNumeros))
+
+// this no escopo global
+// let janela = jn();
+
+// function jn() {
+//     return this;
+// }
+// console.log(janela);
+
+// this no escopo local
+let aluno = {
+    nome: "João",
+    sobrenome: "Pequeno",
+    nomeCompleto: function() {
+        return this.nome + " " + this.sobrenome;
+    }
+}
+console.log(aluno.nomeCompleto())
+
+// O construtor new (palavra-chave) cria um objeto
+function funcionario(nome, sobrenome) {
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+}
+
+let oNomeDele = new funcionario("João", "De Deus");
+console.log(oNomeDele.sobrenome);
