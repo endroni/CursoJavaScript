@@ -149,3 +149,65 @@ console.log(divide(4,2));
 // Obs. As funções em seta precisam ser definidas antes de serem usadas. Não são adequadas 
 // Falaremos do this depois que tratarmos objetos.
 
+console.log("-----------------------------------------------------------------")
+
+
+// Um pouco sobre array 
+const valores = [7.8, 6.4, 5.3, 9.8, 8.6, 3.5, 7.2, 9.3, 6.0 ]
+console.log(valores[0], valores[3])
+
+// length - tras a quantidade de elementos
+console.log(valores.length)
+
+// push() - adiciona um elemento no final 
+valores.push(2.9)
+console.log(valores)
+
+// pop() - retira o ultimo valor do array
+console.log(valores.pop())
+console.log(valores)
+
+// deletando elemento
+delete valores[0]
+console.log(valores)
+
+console.log(typeof valores)
+
+
+// Percorrendo array
+
+const fabricantes = ["Audi", , "BMW", "Chevrolet", "Ford", "Mercedes", "wolksvagem"]
+
+function imprimir(nome) {
+    console.log(`${nome}`)
+}
+fabricantes.forEach(imprimir)
+
+function imprimir(nome, indice) {
+    console.log(`${indice + 1}. ${nome}`)
+}
+fabricantes.forEach(imprimir)
+
+console.log("-----------------------------------------------------------------")
+
+const notas = [7.8, 6.4, 5.3, 9.8, 8.6, 3.5, 7.2, 9.3, 6.0 ]
+
+// Sem Calback
+let notasBaixas = []
+for (let i in notas) {
+    if (notas[i] < 7) {
+        notasBaixas.push(notas[i])
+    }
+}
+console.log(notasBaixas)
+
+// Com callback 
+const notasBaixas2 = notas.filter(function (nota) {
+    return nota < 7
+})
+
+console.log(notasBaixas2)
+
+// ou 
+const notasBaixas3 = notas.filter(nota => nota < 7)
+console.log(notasBaixas3)
