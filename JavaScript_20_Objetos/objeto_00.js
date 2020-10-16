@@ -68,6 +68,10 @@ Um método de objeto é uma propriedade de objeto que contém uma definição de
 
 Exemplo: 
 */
+
+
+
+
 const aluno = {
     nome: "Charles",
     sobrenome: "Xavier",
@@ -75,6 +79,17 @@ const aluno = {
     nomeCompleto: function() {return this.nome + " " + this.sobrenome;}
 }
 console.log(aluno.nomeCompleto())
+
+// Em uma definição de função, this refere-se ao "proprietário" da função.
+// No exemplo acima, this é o objeto aluno que "possui" a função nomeCompleto.
+// Em outras palavras, this.nome significa a propriedade nome deste objeto .
+
+
+
+
+
+
+
 
 // Objeto contendo outros objetos
 

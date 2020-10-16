@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percorrendo Objeto</title>
+</head>
+<body>
+    <h2>Percorrendo um objeto</h2>
+
+    <p id="aqui"></p>
+
+    <script>
+    let x, txt = "";
+    let oCara = {name:"Elon", sobrenome: "Musk", idade:49, natural:"Pretória"};
+
+    for (x in oCara) {
+    txt += oCara[x] + " ";
+    };
+
+    document.getElementById("aqui").innerHTML = txt;
+
+    // Deve-s usar oCara[x] no loop.
+    // oCara.x não funcionará (porque x é uma variável).
+
+    </script>
+</body>
+</html>
