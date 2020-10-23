@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secetor</title>
+    <title>textContent</title>
+
+    <style>
+        .bom {
+            color: blue;
+        }
+        .legal {
+            color: green;
+        }
+        .levando {
+            color: purple;
+        }
+    </style>
 </head>
 <body>
-    <p>teste</p>
+    <p id="p1">Parágrafo 1</p>
+    <p id="p2">Parágrafo 2</p>
+    <p id="p3">Parágrafo 3</p>
+    <p id="p4">Texto</p>
+
+    <p id="hora"></p>
 
     <script>
-        var t = window.document.getElementsTagName('p')[0]
-        t.style.color = 'red'
+        let p1 = document.querySelector('#p1');
+        let p2 = document.querySelector('#p2');
+        let p3 = document.querySelector('#p3');
+
+        let p4 = document.querySelector('#p4');
+
+        p1.classList.add('bom')
+        p2.classList.add('legal')
+        p3.classList.add('levando')
+
+        p2.classList.remove('legal')
+
+        p4.textContent = 'Parágrafo 4'
+
+        let phora = document.querySelector('#hora')
+        let hora = new date()
+        phora.textContent = hora        
+
+        
     </script>
 </body>
 </html>

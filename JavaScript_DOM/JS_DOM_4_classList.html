@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Cont...</title>
+    <style>
+        .bom {
+            color: blue;
+        }
+        .legal {
+            color: red;
+        }
+        .sextou {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Parágrafo 1</p>
+    <p id="p2">Parágrafo 2</p>
+    <p id="p3">Parágrafo 3</p>
+    <p id="p4">Aguardando ...</p>    
+
+    <script>
+        let par1 = document.querySelector('#p1')
+        let par2 = document.querySelector('#p2')
+        let par4 = document.querySelector('#p4')
+
+        par1.classList.add('sextou')
+        par2.classList.add('legal')
+
+        par1.classList.remove('sextou')
+
+        par4.textContent = 'Parágrafo 4'
+    </script>
+</body>
+</html>
