@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyup</title>
+</head>
+<body>
+    <h2>keyup</h2>
+    <p>
+    Digite algo: 
+    <input type="text" id="txtpalavra"></p>
+    <p>O evento keyup ocorre quando libera a tecla do teclado </p>
+    
+    <script>
+        // Capturando o input
+        const palavra = document.getElementById("txtpalavra");
+
+        // Criando uma escuta 
+        palavra.addEventListener('keyup', maiusculo) 
+
+        // Uma função para passar para caixa alta   
+        function maiusculo() {        
+        palavra.value = palavra.value.toUpperCase();
+        }
+    </script>    
+</body>
+</html>
