@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>keyup</title>
+    <title>Evento - keyup</title>
 </head>
 <body>
     <h2>keyup</h2>
+    <p>O evento keyup ocorre quando libera a tecla do teclado</p>
     <p>
-    Digite algo: 
-    <input type="text" id="txtpalavra"></p>
-    <p>O evento keyup ocorre quando libera a tecla do teclado </p>
-    
+        Digite algo: 
+        <input type="text" name="palavra" id="txtpalavra" placeholder="alguma coisa">
+    </p>
+
     <script>
         // Capturando o input
-        const palavra = document.getElementById("txtpalavra");
+        const palavra = document.getElementById("txtpalavra")
 
         // Criando uma escuta 
-        palavra.addEventListener('keyup', maiusculo) 
+        palavra.addEventListener('keyup', maiusculo)
 
-        // Uma função para passar para caixa alta   
-        function maiusculo() {        
-        palavra.value = palavra.value.toUpperCase();
+        // Uma função para passar para caixa alta
+        function maiusculo() {
+            palavra.value = palavra.value.toUpperCase();
         }
-    </script>    
+    </script>
 </body>
 </html>

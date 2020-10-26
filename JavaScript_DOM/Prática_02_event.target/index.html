@@ -6,22 +6,22 @@
     <title>event.target</title>
 </head>
 <body>
-    <p>Clique em qualquer elemento neste documento para descobrir qual elemento disparou o evento onclick.</p>
+    <h1>event.target</h1>
+    <p>O event.target retorna 
+        o elemento que disparou o evento.
+    </p>
+    <h2>Este é um subtítulo</h2>
+    <button>Um botão</button>
+    <p id="exe"></p>
 
-<h1>Este é um título</h1>
+    <script>
+        const clique = addEventListener('click', emQuemClilquei)
 
-<button>Isto é um botão</button>
+        function emQuemClilquei( event) {
+            const elemento = event.target;
 
-<p id="exe"></p>
-
-<script>
-
-const clique = addEventListener('click', emQuemCliquei)
-
-function emQuemCliquei(event) { 
-  const elemento = event.target;
-  document.getElementById("exe").innerHTML = "Disparado pelo elemento " + elemento.tagName;
-}
-</script>
+            document.getElementById("exe").innerHTML = "Disparado pelo elemento: " + elemento.tagName;
+        }
+    </script>
 </body>
 </html>
