@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>event.target</title>
 </head>
-<body onclick="emQuemCliquei(event)">
+<body>
     <p>Clique em qualquer elemento neste documento para descobrir qual elemento disparou o evento onclick.</p>
 
 <h1>Este é um título</h1>
@@ -15,6 +15,9 @@
 <p id="exe"></p>
 
 <script>
+
+const clique = addEventListener('click', emQuemCliquei)
+
 function emQuemCliquei(event) { 
   const elemento = event.target;
   document.getElementById("exe").innerHTML = "Disparado pelo elemento " + elemento.tagName;
