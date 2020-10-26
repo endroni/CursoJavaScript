@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event.target</title>
+</head>
+<body onclick="emQuemCliquei(event)">
+    <p>Clique em qualquer elemento neste documento para descobrir qual elemento disparou o evento onclick.</p>
+
+<h1>Este é um título</h1>
+
+<button>Isto é um botão</button>
+
+<p id="exe"></p>
+
+<script>
+function emQuemCliquei(event) { 
+  const elemento = event.target;
+  document.getElementById("exe").innerHTML = "Disparado pelo elemento " + elemento.tagName;
+}
+</script>
+</body>
+</html>
