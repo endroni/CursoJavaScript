@@ -5,22 +5,22 @@ const inputSalario = document.querySelector('#inputSalario');
 const divResultado = document.querySelector('#divResultado');
 
 function start() {
-  preventFormSubmit();
+  previneEnvio();
   calcSalarioLiquido();
 }
    
-function preventFormSubmit() {
-  function handleFormSubmit(event) {
+function previneEnvio() {
+  function trataEnvioFormulario(event) {
     event.preventDefault();//previne o comportamento default do objeto, ou seja cancela o comportamento que os elementos geralmente tem na página,
   }
 
   const form = document.querySelector('form');
-  form.addEventListener('submit', handleFormSubmit);
+  form.addEventListener('submit', trataEnvioFormulario);
 }
 
 function calcSalarioLiquido() {
 
-  function handleChange(event) {
+  function trataMudanca(event) {
 
     salarioLiquido = inputSalario.value;
     divResultado.innerHTML = "";
@@ -45,7 +45,7 @@ function calcSalarioLiquido() {
   }
 
   function startValues() {
-    inputSalario.addEventListener('change', handleChange);
+    inputSalario.addEventListener('change', trataMudanca);
   }
 
   startValues();

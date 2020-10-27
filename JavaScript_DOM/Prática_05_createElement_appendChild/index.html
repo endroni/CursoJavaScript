@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    <h1>createElement</h1>
+    <h1>appendChild</h1>
+    <p>Cria um elemento atraves do Js</p>
+
+    <p>Clique no botão para criar um elemento BUTTON.</p>
+
+    <button id="clique">Teste</button> 
+
+    <script>     
+        const cli = document.querySelector('#clique')
+
+        cli.addEventListener('click', criaBotao)
+        
+        function criaBotao() {
+            const btn = document.createElement("BUTTON");   // cria um botão. Mude para p, h1, ...
+            btn.innerHTML = "Apareci!!!"                    // Coloca um texto dentro do botão
+            document.body.appendChild(btn);                 // Inseri o botão
+        }
+    </script>
+</body>
+</html>
