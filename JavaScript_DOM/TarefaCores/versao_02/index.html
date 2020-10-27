@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(128, 128, 128); 
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+        }
+    </style>    
+</head>
+<body>
+    <h2>RGB - Rubem Cândido</h2>
+    <hr/>
+    <p>
+        ( R ) Vermelho: 
+        <input type="range" name="rvermelho" id="rvermelho" min="0" max="255">
+        <input type="text" name="vverm" id="vverm" size="2" disabled="">        
+    </p>
+
+    <p>
+        ( G ) Verde: 
+        <input type="range" name="ranVerde" id="ranVerde" min="0" max="255">
+        <input type="text" name="valVerde" id="valVerde" size="2" disabled="">        
+    </p>
+
+    <p>
+        ( B ) Azul: 
+        <input type="range" name="ranAzul" id="ranAzul" min="0" max="255">
+        <input type="text" name="valAzul" id="valAzul" size="2" disabled=""> <!--  readonly também serve-->        
+    </p>
+
+    <div id="area"></div>
+    <script>        
+        const area = document.querySelector('#area')
+
+        const rang1 = document.querySelector('#rvermelho')
+        const verm = document.createElement("input")
+        const vverm = document.querySelector('#vverm')
+
+        const rang2 = document.querySelector('#ranVerde')
+        const verd = document.createElement("input")
+        const vVerd = document.querySelector('#valVerde')
+
+        const rang3 = document.querySelector('#ranAzul')
+        const azul = document.createElement("input")
+        const vAzul = document.querySelector('#valAzul')
+  
+        rang1.addEventListener('mouseup', captura)
+        rang2.addEventListener('mouseup', captura)
+        rang3.addEventListener('mouseup', captura)
+
+        window.addEventListener('load', captura)
+
+        function captura() {
+            verm.type = 'text'
+            verm.value = rang1.value
+            vverm.value = rang1.value
+
+            verd.type = 'text'
+            verd.value = rang2.value
+            vVerd.value = rang2.value
+
+            azul.type = 'text'
+            azul.value = rang3.value
+            vAzul.value = rang3.value
+
+            area.style.background = `rgb(${verm.value}, ${verd.value}, ${azul.value})`
+        }        
+    </script>
+</body>
+</html>
