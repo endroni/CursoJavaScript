@@ -6,8 +6,8 @@
     <title>createElement</title>
 </head>
 <body>
-    <h1>createElement</h1>
-    <h1>appendChild</h1>
+    <h1>createElement ()</h1>
+    <h1>appendChild ()</h1>
     <p>Cria um elemento atraves do Js</p>
 
     <p>Clique no botão para criar um elemento BUTTON.</p>
@@ -20,8 +20,9 @@
         cli.addEventListener('click', criaBotao)
         
         function criaBotao() {
-            const btn = document.createElement("BUTTON");   // cria um botão. Mude para p, h1, ...
-            btn.innerHTML = "Apareci!!!"                    // Coloca um texto dentro do botão
+            const btn = document.createElement("input");   // cria um botão. Mude para p, h1, ...
+            // btn.type = 'password'                           // altera a propriedade
+            btn.innerHTML = "Um paragrafo!!!"                    // Coloca um texto dentro do botão
             document.body.appendChild(btn);                 // Inseri o botão
         }
     </script>

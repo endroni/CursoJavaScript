@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    <h1>Quais são seus carros favoritos?</h1>
+    <p>
+        <input type="text" name="car" id="txtcar" onfocus="this.value=''">
+        <button id="add">Add</button>
+    </p>
+
+    <script>     
+        var cli = document.querySelector('#add')
+
+        cli.addEventListener('click', adicionaCarros)        
+
+        var foco = document.querySelector('#txtcar')
+        
+        function adicionaCarros() {
+            
+            const carro = document.querySelector('#txtcar')
+        
+            const listCarro = document.createElement('p')
+            listCarro.innerHTML = carro.value 
+            document.body.appendChild(listCarro)
+        }
+    </script>
+</body>
+</html>
