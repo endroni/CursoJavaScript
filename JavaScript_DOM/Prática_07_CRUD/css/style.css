@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+ul, li {
+    list-style-type: none;  /* Limpa os estilos da lista */
+}
+
+.clickable {
+    cursor: pointer; /* Faz aparecer a mãozinha no cursor */
+}
+
+.deleteButton {
+    color: white;
+    font-weight: bold;
+    background-color: darkred;
+    margin-right: 10px;
+    border-radius: 50%;
+}
