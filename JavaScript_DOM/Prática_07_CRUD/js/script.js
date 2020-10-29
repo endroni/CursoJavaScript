@@ -12,6 +12,7 @@ var inputName = null;
 function start() {
     // Impede recarregamento
     preventFormSubmit();
+    render();
 
     // Captura o valor do input via id
     inputName = document.querySelector('#inputName')
@@ -39,7 +40,7 @@ function activateInput() {
     // Insere o novo nome
     function insertName(newName) {
         globalNames.push(newName);
-        console.log(globalNames);
+        render();
     }
 
     // Tem o objetivo de tratar a digitação
@@ -54,3 +55,45 @@ function activateInput() {
     inputName.addEventListener('keyup', handleTyping);
 }
 
+
+
+function render() {
+    var divNames = document.querySelector('#names');
+    divNames.innerHTML = ''; // Para não replicar a lista
+
+    // Criar ul
+    var ul = document.createElement('ul');
+
+    for (var i = 0; i < globalNames.length; i++) {
+        var currentName = globalNames[i];
+        // Criar li em cada iteração
+        var li = document.createElement('li');
+        // li.textContent = currentName;
+        
+
+        // Criação do botão de excluir
+        var button = document.createElement('button');
+        button.classList.add('deleteButton');
+        button.textContent = 'X';
+
+        // Criação de span para receber o nome
+        var span = document.createElement('span');
+        span.textContent = currentName;
+
+        // Anexando o botão e o span ao li
+        li.appendChild(button);
+        li.appendChild(span);
+
+        ul.appendChild(li);
+    }
+    
+
+    divNames.appendChild(ul);
+    clearInput();
+}
+
+function clearInput() {
+    // TODO: Não funcionou, limpar após inserir
+    // inputName.value = '';
+    // inputName.focus();
+}
