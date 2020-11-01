@@ -1,54 +1,56 @@
 window.addEventListener('load', start); // Carrega a página antes de executar qualquer aplicação
 
 //Escopo global - Captura os elementos
-const velocidadeVia = document.querySelector('#velocidadeVia')
-const velocidadeTraf = document.querySelector('#velocidadeTraf')
-
-const verificar = document.querySelector('#verificar')
-
-const res = document.querySelector('#res')
+const inputVelocidadePermitida = document.querySelector('#inputVelocidadePermitida');
+const inputVelocidadeTrafegada = document.querySelector('#inputVelocidadeTrafegada');
+const divResultado = document.querySelector('#divResultado');
 
 function start() {
-    previneEnvio();
+  previneEnvio();
+  calcDiferencaVelocidade();
+}
+   
+function previneEnvio() {
+  function trataEnvioFormulario(event) {
+    event.preventDefault();//previne o comportamento default do objeto, ou seja cancela o comportamento que os elementos geralmente tem na página,
+  }
+
+  const form = document.querySelector('form');
+  form.addEventListener('submit', trataEnvioFormulario);
 }
 
-verificar.addEventListener('click', Verificar)
+function calcDiferencaVelocidade() {
 
-function Verificar() {  
+  function trataMudanca(event) {
 
-    const velMaxima = velocidadeVia.value
-    const odometro = velocidadeTraf.value
-    const diferenca = odometro - velMaxima
-    const porcentagem = diferenca / 100 * velMaxima
-
-    if ( odometro > velMaxima ) {
-        if ( diferenca <= 7 ) {
-            res.textContent = `Advertência! 
-            Velocidade máxima da via ${velMaxima} Km/h.
-            Velocidade trafegada ${odometro} Km/h. `
-        }   
-        else if (porcentagem <= 20 ) {
-            res.textContent = 
-            `Autuado. Infração Grave. 
-            Velocidade máxima da via ${velMaxima} Km/h.
-            Velocidade trafegada ${odometro} Km/h. 
-            ${porcentagem} % acima da velocidade máxima`
+    velocidadePermitida = inputVelocidadePermitida.value;
+    velocidadeTrafegada = inputVelocidadeTrafegada.value;  
+    
+    if (velocidadePermitida > velocidadeTrafegada) {
+      diferencaVelocidade = Number(0);
+    } else if (velocidadeTrafegada > velocidadePermitida) {
+      if (velocidadeTrafegada > velocidadePermitida) {
+      diferencaVelocidade = inputVelocidadeTrafegada.value -inputVelocidadePermitida.value;
+        if( diferencaVelocidade <= 7 ){
+          
         }
-    }
-    else {
-        res.textContent = 
-        `Velocidade máxima da via ${velMaxima} Km/h.
-        Velocidade trafegada ${odometro} Km/h. 
-        Siga com cuidado`
+      } 
     }
     
+    divResultado.innerHTML = "";
 
-    function calculaAutuacao(event) {
-        res.textContent = `teste`
-    }
-    
-      function startValues() {
-        inputSalario.addEventListener('change', calculaAutuacao);
-      }    
-      startValues();
+    const span = document.createElement('span');
+
+    span.textContent = `${diferencaVelocidade} Km/h acima do permitido`;
+
+    divResultado.appendChild(span);
+
+  }
+
+  function startValues() {
+    inputVelocidadePermitida.addEventListener('change', trataMudanca);
+    inputVelocidadeTrafegada.addEventListener('change', trataMudanca); 
+  }
+
+  startValues();
 }

@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de autuações</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Exemplo de HTML com CSS e JavaScript utilizando DOM"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript, js, DOM, SENAI, FATEC, Centro, Rubão"/>
+    <meta name="author" content="Rubem Cândido dos Santos"/>
+    <title>Sistema Detran</title>
+    <link rel="icon" href="img/javascript.png" type="image/png"/> <!-- Um icon no title -->
+    <link href="https://fonts.googleapis.com/css?family=Big%20Shoulders%20Text" rel="stylesheet"/> <!-- Font do google -->
+    <link rel="stylesheet" href="./css/reset.css"/> <!-- Zera a formatação padrão do navegador -->
+    <link rel="stylesheet" href="./css/styles.css"/> <!-- Por estar abaixo, irá sobrepor o css reset -->
 </head>
 <body>
-    <h2>Sistema de trânsito</h2>
+    <h1>Exemplo HTML, CSS, JavaScript - Rubem Cândido</h1>
+    <hr/>
 
-    <p>
-        Velocidade da via: 
-        <input type="text" name="velocidadeVia" id="velocidadeVia" placeholder="Km/h" onfocus="this.value=''"/>
-    </p>
-    <p>
-        Velocidade trafegada: 
-        <input type="text" name="velocidadeTraf" id="velocidadeTraf" placeholder="Km/h" onfocus="this.value=''"/>
-    </p>
-    <input type="button" value="verificar" id="verificar">
-    <div id="res"></div>
-    <script src="./js/script.js"></script>
+    <div class="geral">
+      <div id="divResultado"> Calculo de velocidade</div>
+      <div class="container">
+        <form>
+          <input type="text" id="inputVelocidadePermitida" size="35" placeholder="Velocidade Permitida">
+          <input type="text" id="inputVelocidadeTrafegada" size="35" placeholder="Velocidade do Veículo">
+        </form>  
+      </div>
+    </div>
+    <script src='./js/script.js'></script>
+      
 </body>
 </html>
