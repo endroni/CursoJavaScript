@@ -7,16 +7,16 @@
 </head>
 <body>
     <h2>Sistema de trânsito</h2>
+
     <p>
         Velocidade da via: 
-        <input type="text" name="velocidadeVia" id="velocidadeVia" placeholder="Km/h">
-        <input type="button" id="btnVia" value="Salvar">
+        <input type="text" name="velocidadeVia" id="velocidadeVia" placeholder="Km/h" onfocus="this.value=''"/>
     </p>
     <p>
         Velocidade trafegada: 
-        <input type="text" name="velocidadeTraf" id="velocidadeTraf" placeholder="Km/h">
-        <input type="button" id="btnTraf" value="Salvar">
+        <input type="text" name="velocidadeTraf" id="velocidadeTraf" placeholder="Km/h" onfocus="this.value=''"/>
     </p>
+    <input type="button" value="verificar" id="verificar">
     <div id="res"></div>
     <script src="./js/script.js"></script>
 </body>
