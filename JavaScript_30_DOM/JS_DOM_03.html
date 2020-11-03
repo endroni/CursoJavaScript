@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <!-- Página 98 -->
+    <h1>Somar dois números</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+            let tn1 = window.document.getElementById('txtn1')  // Por ID
+            let tn2 = window.document.getElementById('txtn2')
+            let res = window.document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let soma = n1 + n2
+            res.innerHTML = soma
+        }
+
+        // Anotações, página 33
+    </script>
+</body>
+</html>
