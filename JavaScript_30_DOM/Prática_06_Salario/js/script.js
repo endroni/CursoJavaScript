@@ -1,10 +1,10 @@
-window.addEventListener('load', start); // Carrega a página antes de executar qualquer aplicação
+window.addEventListener('load', inicia); // Carrega a página antes de executar qualquer aplicação
 
 //Escopo global - Captura os elementos
 const inputSalario = document.querySelector('#inputSalario');
 const divResultado = document.querySelector('#divResultado');
 
-function start() {
+function inicia() {
   previneEnvio();
   calcSalarioLiquido();
 }
@@ -41,12 +41,12 @@ function calcSalarioLiquido() {
     span.textContent = `Seu salário Liquido é de R$  ${salarioLiquido.toFixed(2)}`;
 
     divResultado.appendChild(span);
-
   }
 
-  function startValues() {
+  function iniciaValores() {
     inputSalario.addEventListener('change', trataMudanca);
   }
 
-  startValues();
+  iniciaValores();
 }
+
