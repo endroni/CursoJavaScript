@@ -58,8 +58,32 @@ function activateInput() {
 
 
 function render() {
+
+    // Cria o botão de exluir
+    function createDeleteButton(index) {
+
+        function deleteName() {
+            // Exclui do vetor o indice enviado e apenas
+            // 1 índice
+            globalNames.splice(index, 1);
+            render();
+        }
+
+        var button = document.createElement('button');
+        button.classList.add('deleteButton');
+        button.textContent = 'X';
+
+        // Criando a ação de click que chama 
+        // a função deleteName
+        button.addEventListener('click', deleteName);
+        return button;
+    }
+
     var divNames = document.querySelector('#names');
-    divNames.innerHTML = ''; // Para não replicar a lista
+
+    // Limpa a div names para não ficar
+    // duplicando a lista
+    divNames.innerHTML = ''; 
 
     // Criar ul
     var ul = document.createElement('ul');
@@ -68,9 +92,9 @@ function render() {
         var currentName = globalNames[i];
         // Criar li em cada iteração
         var li = document.createElement('li');
-        // li.textContent = currentName;
-        
 
+        var button = createDeleteButton(i);
+        
         // Criação do botão de excluir
         var button = document.createElement('button');
         button.classList.add('deleteButton');
