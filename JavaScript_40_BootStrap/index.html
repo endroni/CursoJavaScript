@@ -1,59 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <title>Bootstrap Aula 00</title>
+  <title>Bootstrap Website Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./img/logo.png" type="imagen/png">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> 
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
 </head>
 <body>
 
-<div class="jumbotron text-center">
-  <h1>Exemplo Bootstrap 00</h1>
-  <p>Essa página é responsiva</p> 
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Aula completa</h1>
+  <p>Tudo que vimos sobre boostrap</p> 
 </div>
-  
-<div class="container">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="bootstrap_00.html">Aula 00</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bootstrap_01.html">Aula 01</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bootstrap_02.html">Aula 02</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-sm-4">
-      <h3>O que é Bootstrap?</h3>
-      <p>Bootstrap é uma estrutura de front-end gratuita para desenvolvimento web mais rápido e fácil</p>
-      <p>O Bootstrap inclui modelos de design baseados em HTML e CSS para tipografia, formulários, botões, tabelas, navegação, modais, carrosséis de imagens e muitos outros, bem como plug-ins opcionais de JavaScript</p>
-      <p>O Bootstrap também oferece a capacidade de criar designs responsivos facilmente</p>
+      <h2>Rubem</h2>
+      <h5>Sobre mim:</h5>
+      <div class="fakeimg">Uma imagem</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>Some Links</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
     </div>
-    <div class="col-sm-4">
-      <h3>História de bootstrap</h3>
-      <p>O Bootstrap foi desenvolvido por Mark Otto e Jacob Thornton no Twitter e lançado como um produto de código aberto em agosto de 2011 no GitHub.</p>
-      <p><strong>Em junho de 2014, o Bootstrap foi o projeto nº 1 no GitHub!</strong></p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Por que usar o Bootstrap?</h3>        
-      <p><strong>Fácil de usar:</strong> qualquer pessoa com apenas conhecimentos básicos de HTML e CSS pode começar a usar o Bootstrap</p>
-      <p><strong>Recursos responsivos:</strong> o CSS responsivo do Bootstrap se ajusta a telefones, tablets e desktops</p>
-      <p><strong>Compatibilidade do navegador:</strong> o Bootstrap é compatível com todos os navegadores modernos (Chrome, Firefox, Internet Explorer, Edge, Safari e Opera)</p>
+    <div class="col-sm-8">
+      <h2>Foco</h2>
+      <h5>Direção certa, Nov 5, 2020</h5>
+      <div class="fakeimg">Uma imagem</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <br>
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg">Fake Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
   </div>
 </div>
 
-<div class="container">
-    <h1>Existem duas formas de se utilizar Bootstrap</h1>
-</div>
-
-<div class="container">
-    <h1>1ª - CDN (Content Delivery Network) - Rede de Distribuição de Conteúdo</h1>
-    <p>Incluindo um link no <code>head</code> da página como fizemos nesse exemplo.</p>
-</div>
-
-<div class="container">
-    <h1>2ª - Baixando Bootstrap</h1>
-    <p>Caso não queira utilizar o CDN. É possível fazer o download e hospedar o Bootstrap sozinho, acesse <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" target="_blank">getbootstrap.com</a></p>
-</div>
-
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Cada um tem o seu próprio tempo de aprender</p>
-  <p>Siga sempre no caminho certo</p>
+  <p>Footer</p>
 </div>
 
   <!-- jQuery library -->
@@ -62,5 +91,6 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <!-- Muitos de nossos componentes requerem o uso de JavaScript para funciona -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </body>
 </html>
