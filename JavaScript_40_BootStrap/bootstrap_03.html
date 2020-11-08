@@ -12,23 +12,60 @@
         <h1>Significado por meio de cores</h1>  
         <p>O bootstrap tenta usar as cores como significados</p>     
     </div>
-    <div class="container.fluid">
+    <div class="container">
         <h2>Algumas cores de texto:</h2>
         <ul>
             <li><code>.text-primary</code>
                 <div class="text-primary">Um texto primário</div>
             </li>
         </ul>
+
+        <p>Link para <a href="https://getbootstrap.com.br/docs/4.1/utilities/colors/" class="text-light bg-dark" target="_blank">documentação</a> oficial</p>
+
+        <div class="p-3 mb-2 bg-dark text-white-50">.bg-dark com 50% do branco</div>
+        <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+        <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+        <div class="p-3 mb-2 bg-warning text-dark-50">.bg-warning com 50% do preto</div>
+        <div class="p-3 mb-2 bg-info text-white">.bg-info</div>    
+    </div>  
+
+    <div class="container py-4">
+        <h1>Colunas - grid</h1>
+        <p>São permitidas até 12 colunas</p>
+        <p><code>.col</code> Essa classe deixa o dimensionamento 
+        por conta do bootstrap</p>
+        <div class="row">
+            <div class="col" style="background-color:lavender;">
+                <p>Conteúdo da primeira coluna</p>
+            </div>
+            <div class="col" style="background-color:orange;">
+                <p>Conteúdo da segunda coluna</p>
+            </div>
+            <div class="col" style="background-color:lavender;">
+                <p>Conteúdo da terceira coluna</p>
+            </div>
+        </div>
     </div>
-    
-    <p>Link para <a href="https://getbootstrap.com.br/docs/4.1/utilities/colors/" class="text-light bg-dark" target="_blank">documentação</a> oficial</p>
+    <div class="container py-4">
+        <h2>Existem 5 classe para dispositivos</h2>
+        <p><code>.col-</code> (dispositivos extra pequenos - largura da tela menor que 576 px)</p>
+        <p><code>.col-sm-</code> (dispositivos pequenos - largura da tela igual ou superior a 576 px)</p>
+        <p><code>.col-md-</code> (dispositivos médios - largura da tela igual ou superior a 768 px)</p>
+        <p><code>.col-lg-</code> (dispositivos grandes - largura da tela igual ou superior a 992 px)</p>
+        <p><code>.col-xl-</code> (dispositivos xlarge - largura da tela igual ou superior a 1200 px)</p>
+    </div>
 
-    <div class="p-3 mb-2 bg-dark text-white-50">.bg-dark com 50% do branco</div>
-    <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
-    <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-    <div class="p-3 mb-2 bg-warning text-dark-50">.bg-warning com 50% do preto</div>
-    <div class="p-3 mb-2 bg-info text-white">.bg-info</div>    
-    
-
+    <div class="container pb-5">
+        <h2>A soma dos valores precisa somar 12</h2>
+        <p>No exemplo abaixo, temos 4 colunas com numero 3</p>
+        <p>4 x 3 = 12</p>
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+        </div>
+        <div class="container py-3">Link da <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">documentação</a> oficial</div>
+    </div>
 </body>
 </html>
