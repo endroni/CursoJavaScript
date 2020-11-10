@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Aula 04</title>
+    <link rel="icon" href="./img/logo.png" type="imagen/png">
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Tabelas no Bootstrap</h1>  
+        <p>a classe <code>.table</code> possui um estilo próprio</p>      
+    </div>
+
+    <!-- Uma table normal -->
+    <!-- .table-striped - listrada -->
+    <!-- .table-bordered - uma borda -->
+    <!-- .table-hover -->
+    <!-- .table-dark -->
+    <!-- .table-borderless = sem borda -->
+    <!-- .table-responsive - Adiciona uma barra de rolagem horizontal quando a tabela é muito grande --> 
+    
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>              
+              <!-- <tr class="table-dark text-dark table-borderless"> -->
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+</body>
+</html>
