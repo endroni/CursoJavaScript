@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +18,10 @@
             <li><code>.text-primary</code>
                 <div class="text-primary">Um texto primário</div>
             </li>
+            <li><code>.bg-success</code>
+                <div class="bg-success text-white">Um fundo de sucesso</div>
+            </li>
         </ul>
-
-        <p>Link para <a href="https://getbootstrap.com.br/docs/4.1/utilities/colors/" class="text-light bg-dark" target="_blank">documentação</a> oficial</p>
 
         <div class="p-3 mb-2 bg-dark text-white-50">.bg-dark com 50% do branco</div>
         <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
@@ -35,17 +36,31 @@
         <p><code>.col</code> Essa classe deixa o dimensionamento 
         por conta do bootstrap</p>
         <div class="row">
-            <div class="col" style="background-color:lavender;">
+            <div class="col bg-primary">
                 <p>Conteúdo da primeira coluna</p>
             </div>
-            <div class="col" style="background-color:orange;">
+            <div class="col bg-dark text-white">
                 <p>Conteúdo da segunda coluna</p>
             </div>
-            <div class="col" style="background-color:lavender;">
+            <div class="col bg-success">
                 <p>Conteúdo da terceira coluna</p>
             </div>
         </div>
     </div>
+
+    <div class="container pb-5">
+        <h2>A soma dos valores precisa somar 12</h2>
+        <p>No exemplo abaixo, temos 4 colunas com numero 3</p>
+        <p>4 x 3 = 12</p>
+        <div class="row">
+            <div class="col-sm-3 bg-info" >.col-sm-3</div>
+            <div class="col-sm-3 bg-success">.col-sm-3</div>
+            <div class="col-sm-3 bg-secondary">.col-sm-3</div>
+            <div class="col-sm-3 bg-warning">.col-sm-3</div>
+        </div>        
+    </div>
+
+
     <div class="container py-4">
         <h2>Existem 5 classe para dispositivos</h2>
         <p><code>.col-</code> (dispositivos extra pequenos - largura da tela menor que 576 px)</p>
@@ -55,17 +70,75 @@
         <p><code>.col-xl-</code> (dispositivos xlarge - largura da tela igual ou superior a 1200 px)</p>
     </div>
 
-    <div class="container pb-5">
-        <h2>A soma dos valores precisa somar 12</h2>
-        <p>No exemplo abaixo, temos 4 colunas com numero 3</p>
-        <p>4 x 3 = 12</p>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
-            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
-            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
-            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-dark">1</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-danger">2</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-primary">3</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-warning">4</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-info">5</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-secondary">6</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-dark">7</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-danger">8</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-primary">9</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-warning">10</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-info">11</div>
+            <div class=" col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-secondary">12</div>
         </div>
-        <div class="container py-3">Link da <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">documentação</a> oficial</div>
     </div>
+    <!-- Uma quebra de linha -->
+    <div class="container-fluid">
+        <h2 class="py-3">Uma quebra de linha na grid</h2>
+        <div class="row">
+            <div class="col-3 bg-primary">1</div>
+            <div class="col-3 bg-secondary">2</div>
+            <div class="w-100"></div>
+            <div class="col-3 bg-dark">3</div>
+            <div class="col-3 bg-warning">4</div>
+        </div>
+    </div>
+    <!-- Controlando a ordem -->
+    <!-- A ordem vai de 1 a 12 -->
+    <!-- Isso nos permite manipular elementos no JS -->
+    <div class="container-fluid py-4">
+        <h2>Controlando a ordem da grid</h2>
+        <div class="row">
+            <div class="col-4 bg-primary order-6">1</div>
+            <div class="col-4 bg-info order-12">2</div>
+            <div class="col-4 bg-danger order-1">3</div>
+        </div>
+        <!-- Ele vai comparar os valores. Precisa de pelo menos dois valores para comparar -->
+    </div>
+
+    <!-- OffSet -->
+    <!-- Um espaço (deslocamento) entre as grids -->
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-3 bg-success offset-7">1</div>
+            <div class="col-4 bg-primary offset-3">2</div>
+            <div class="col-6 bg-warning offset-1">3</div>
+        </div>
+    </div>
+
+    
+    <div class="container-fluid py-3">
+        <p>Link para <a href="https://getbootstrap.com.br/docs/4.1/utilities/colors/" class="text-light bg-dark" target="_blank">documentação</a> oficial</p>
+        <p>Link da <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">documentação</a> oficial</p>
+    </div>
+
+    <!-- Alinhamento -->
+    <div class="container-fluid">
+        <div class="row h-300">
+            <div class="col-4 align-self-end bg-primary">1</div>
+            <div class="col-4 align-self-center bg-danger">2</div>
+            <div class="col-4 align-self-start bg-warning">3</div>
+        </div>
+    </div>
+
+    <style>
+        .h-300 {
+            height: 300px;
+        }
+    </style>
 </body>
 </html>
