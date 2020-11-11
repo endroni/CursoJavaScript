@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 05 - imagens</title>
+    <link rel="icon" href="./img/logo.png" type="imagen/png">
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.css">
+    <style>
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Bootstrap Imagens</h1>
+        <p>Imagens responsivas</p>
+    </div>
+    <div class="container text-center">
+        <p>Imagens responsivas</p>
+        <p><a href="https://getbootstrap.com.br/docs/4.1/content/images/" alt="Referência" target="_blank">Documentação</a></p>
+
+        <p><code>.img-fluid</code> tornar a imagem responsiva</p>
+        <img src="./img/dog.jpg" alt="Cachorro" width="400" class="img-fluid"/>
+
+        <p><code>.img-thumbnail</code> uma moldura</p>
+        <img src="./img/kids.jpg" alt="Crianças" class="img-fluid img-thumbnail"/>
+
+        <p><code>.rounded</code> arredondando os cantos</p>
+        <img src="./img/manhaComCafe20201110.jpg" alt="Uma Xícara de café" class="img-fluid rounded"/>
+
+        <p><code>.rounded-circle</code> círculo</p>
+        <img src="./img/mario.jpg" alt="Mário Bros" class="img-fluid rounded-circle"/>
+        
+        <p><code>.mx-auto .d-block</code> uma forma de alinhar ao centro</p>
+        <img src="./img/custom.jpg" alt="Caminhonete" class="img-fluid mx-auto d-block"/>
+
+        <p><code>.mx-auto .d-block</code> uma forma de alinhar</p>          <!-- float-left -->
+        <img src="./img/ceu20201109.jpg" alt="Nuvens de chuva" class="img-fluid float-right"/>
+    </div>
+</body>
+</html>
