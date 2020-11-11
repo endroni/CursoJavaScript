@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - 06 -Button</title>
+    <link rel="icon" href="./img/logo.png" type="imagen/png">
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.css">    
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h2>Bootstrap Aula 6 - Button</h2>
+        <p>Botões no Bootstrap</p>
+    </div>
+
+    <div class="container">
+        <button type="button" class="btn">Basic</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-link">Link</button> 
+
+        <h2>Button em outros elementos</h2>
+        <p>As classes de botão pode ser usado em <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> ou <code>&lt;input&gt;</code></p>
+        <a href="#" class="btn btn-info" role="button">Link Button</a>
+        <button type="button" class="btn btn-info">Button</button>
+        <input type="button" class="btn btn-info" value="Input Button">
+        <input type="submit" class="btn btn-info" value="Submit Button">
+
+        <p>Para evitar a mensgem de erro "404", coloque # no href quando ainda não tiver a URL real</p>
+
+        <h2>Contorno</h2>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <button type="button" class="btn btn-outline-light text-dark">Light</button>
+
+        <h2>Tamanho</h2>
+        <p>Use a classe <code>.btn-lg</code> para botões grandes</p>
+        <p>ou <code>.btn-sm</code> para botões pequenos:</p>
+        <button type="button" class="btn btn-primary btn-lg">Large</button>
+        <button type="button" class="btn btn-primary">Default</button>
+        <button type="button" class="btn btn-primary btn-sm">Small</button>
+
+        <h2>Nível de bloco</h2>
+        <p><code>.btn-block</code> para criar um botão de nível de bloco que abrange toda a largura do elemento pai.</p>
+        <button type="button" class="btn btn-primary btn-block">Botão de largura total</button>
+
+        <h2>Ativos / desativos</h2>
+        <p><code>.active</code> pareça pressionado</p>
+        <p><code>.disabled</code>não clicável</p>
+        <button type="button" class="btn btn-primary active">Ativado</button>
+        <button type="button" class="btn btn-primary" disabled>Desativado</button> <!-- inclua a classe disabled -->
+        <a href="#" class="btn btn-primary disabled">Disabled Link</a> <!-- retire a classe disabled -->
+        <p>Observe que o uso do disabled no código</p>
+
+        <h2>Botões giratórios</h2>
+        <p>spinners</p>
+        <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+        </button>
+          
+        <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+        </button>
+          
+        <button class="btn btn-primary" disabled>
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+        </button>
+          
+        <button class="btn btn-primary" disabled>
+            <span class="spinner-grow spinner-grow-sm"></span> <!-- text-warning -->
+            Loading..
+        </button>
+
+        
+    </div>    
+</body>
+</html>
