@@ -60,8 +60,43 @@
         <p><code>.disabled</code>não clicável</p>
         <button type="button" class="btn btn-primary active">Ativado</button>
         <button type="button" class="btn btn-primary" disabled>Desativado</button> <!-- inclua a classe disabled -->
+        <button class="btn btn-warning" data-toggle="button">Selecione</button> <!-- precisa do js -->
         <a href="#" class="btn btn-primary disabled">Disabled Link</a> <!-- retire a classe disabled -->
         <p>Observe que o uso do disabled no código</p>
+
+
+        <h2>Grupos de botões</h2>
+        <p><code>.btn-group</code> essa classe agrupa os botões</p>
+        <div class="btn-group">
+            <button class="btn btn-primary">Primeiro</button>
+            <button class="btn btn-primary">Segundo</button>
+            <button class="btn btn-primary">Terceiro</button>
+        </div>
+
+        <h2>Botões verticais</h2>
+        <p><code>.btn-group-vertical</code> classe para criar botões verticais</p>
+        <div class="btn-group-vertical">
+            <button class="btn btn-primary">Yu Yu Hakusho</button>
+            <button class="btn btn-primary">Fullmetal Alchemist</button>
+            <button class="btn btn-primary">Death Note</button>            
+        </div>
+
+        <h2>DropDown </h2>
+        <p><cod>.dropdown-toggle</cod> Botões suspensos</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Filmes</button>
+            <button type="button" class="btn btn-primary">Seriados</button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                 Animes
+              </button>
+              <div class="dropdown-menu">                
+                <a class="dropdown-item" href="#">Death Note</a>
+                <a class="dropdown-item" href="#">Fullmetal Alchemist</a>
+                <a class="dropdown-item" href="#">Yu Yu Hakusho</a>
+              </div>
+            </div>
+          </div>
 
         <h2>Botões giratórios</h2>
         <p>spinners</p>
@@ -82,9 +117,11 @@
         <button class="btn btn-primary" disabled>
             <span class="spinner-grow spinner-grow-sm"></span> <!-- text-warning -->
             Loading..
-        </button>
-
-        
+        </button>        
     </div>    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
 </html>
